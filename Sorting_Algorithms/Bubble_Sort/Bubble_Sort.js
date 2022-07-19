@@ -5,22 +5,20 @@ const swap = function (arr, a, b) {
 };
 
 const BubbleSort = function (arr) {
-  let count = 0;
-  let bool;
+  let tmp;
   for (let i = 0; i < arr.length - 1; ++i) {
-    bool = false;
-    for (let j = 0; j < arr.length - i; ++j) {
-      if (arr[j] < arr[j + 1]) {
+    tmp = false;
+    for (let j = 0; j < arr.length - i - 1; ++j) {
+      if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1);
-        bool = true;
+        tmp = true;
       }
-      ++count;
     }
-    if (bool === false) break;
+    if (tmp === false) break;
   }
-  console.log(count);
+
   return arr;
 };
 
-let arr = [6, 5, 4, 3, 2, 1];
+let arr = [4, 5, 6];
 console.log(BubbleSort(arr));
