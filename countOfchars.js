@@ -18,6 +18,7 @@ function countOfChars_2(str) {
   return [...str].reduce((aggr, char) => (!aggr[char] ? { ...aggr, [char]: 1 } : { ...aggr, [char]: aggr[char] + 1 }), {});
 }
 console.log(countOfChars_2("hello"));
+
 let s = "hello";
 var result = [...s].reduce((a, e) => {
   a[e] = a[e] ? a[e] + 1 : 1;
