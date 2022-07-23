@@ -25,3 +25,20 @@ var result = [...s].reduce((a, e) => {
   return a;
 }, {});
 console.log(result);
+
+function countchar(str) {
+  const Map = str.split("").reduce((aggr, val) => {
+    if (aggr[val] === undefined) {
+      aggr[val] = 1;
+    } else {
+      aggr[val]++;
+    }
+    return aggr;
+  }, {});
+
+  Object.keys(Map).forEach((key) => {
+    console.log(`${key} : ${Map[key]}`);
+  });
+}
+
+countchar("hello");
