@@ -7,4 +7,9 @@ function pow(a, n) {
   return result;
 }
 
-console.log(pow(2, 3));
+function powrec(a, n) {
+  if (n < 1) return 1;
+  return a * powrec(a, --n);
+}
+
+console.log(powrec(3, 3));
