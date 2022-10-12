@@ -30,4 +30,4 @@ const substr2 = (str, substr) => {
   return -1;
 };
 
-console.log(sub("hello", "lo"));
+console.log(substr("hello", "lo"));
